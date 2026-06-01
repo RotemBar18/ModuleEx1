@@ -2,11 +2,11 @@
 <project version="4">
   <component name="deploymentTargetSelector">
     <selectionStates>
-      <SelectionState runConfigName="app">
+      <SelectionState runConfigName="EggClicker">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>
-      <SelectionState runConfigName="eggclicker">
+      <SelectionState runConfigName="CookieClicker">
         <option name="selectionMode" value="DROPDOWN" />
         <DialogSelection />
       </SelectionState>

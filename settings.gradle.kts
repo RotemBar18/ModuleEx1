@@ -23,5 +23,6 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ModuleEx1"
-include(":app")
-include(":eggclicker")
+include(":CookieClicker")
+include(":EggClicker")
+include(":commonlibrary")
