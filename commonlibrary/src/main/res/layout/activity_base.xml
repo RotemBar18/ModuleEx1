@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Dark glassmorphism layout — background gradient is set programmatically
+    in ActivityBase from the app's gradientStartColor / gradientEndColor theme attrs.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- ── Dev Controls ─────────────────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/main_LAY_devControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_format"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FMT: SUFFIX"
+            android:textColor="#FFFFFF"
+            app:strokeColor="#FFFFFF"
+            android:layout_marginEnd="8dp"
+            android:minHeight="40dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+            
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/main_BTN_devMultiply"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x1000"
+            android:textColor="#FFFFFF"
+            app:strokeColor="#FFFFFF"
+            android:minHeight="40dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+    </LinearLayout>
+
+    <!-- ── App title ──────────────────────────────────────────────────────── -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/main_TXT_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.08"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_LAY_devControls" />
+
+    <!-- ── Glassmorphism score card ───────────────────────────────────────── -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/main_CARD_score"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        app:cardBackgroundColor="#1AFFFFFF"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_TXT_title"
+        app:strokeColor="#40FFFFFF"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp">
+
+            <!-- Static "SCORE" label -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.25"
+                android:text="SCORE"
+                android:textColor="#99FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!-- Dynamic score value -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/main_LBL_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="sans-serif"
+                android:text="0"
+                android:textColor="#FFFFFFFF"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ── Glow ring (behind the clickable image) ─────────────────────────── -->
+    <View
+        android:id="@+id/main_VIEW_glowRing"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:background="@drawable/glow_ring"
+        app:layout_constraintBottom_toBottomOf="@id/main_IMG_clickableObject"
+        app:layout_constraintEnd_toEndOf="@id/main_IMG_clickableObject"
+        app:layout_constraintStart_toStartOf="@id/main_IMG_clickableObject"
+        app:layout_constraintTop_toTopOf="@id/main_IMG_clickableObject" />
+
+    <!-- ── Clickable hero image ───────────────────────────────────────────── -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_IMG_clickableObject"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toTopOf="@id/main_BTN_upgrade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_CARD_score" />
+
+    <!-- ── Upgrade CTA button (pill shape) ───────────────────────────────── -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_upgrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:text="Upgrade"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:cornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

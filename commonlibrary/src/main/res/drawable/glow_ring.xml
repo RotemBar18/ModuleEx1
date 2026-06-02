@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Transparent-fill oval with a white stroke so it can be tinted at runtime
+     via ViewCompat.setBackgroundTintList() to the app's glowColor. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#00000000" />
+    <stroke
+        android:width="3dp"
+        android:color="#FFFFFFFF" />
+</shape>

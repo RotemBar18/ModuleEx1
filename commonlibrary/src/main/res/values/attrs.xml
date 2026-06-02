@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom theme attributes for per-app gradient background and glow color -->
+    <attr name="gradientStartColor" format="color" />
+    <attr name="gradientEndColor" format="color" />
+    <attr name="glowColor" format="color" />
+    <attr name="clickableObjectDrawable" format="reference" />
+</resources>
