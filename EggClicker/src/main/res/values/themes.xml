@@ -1,9 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.ModuleEx1" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/eggPrimary</item>
+        <item name="colorOnPrimary">@color/eggOnPrimary</item>
+        <item name="gradientStartColor">@color/eggStart</item>
+        <item name="gradientEndColor">@color/eggEnd</item>
+        <item name="glowColor">@color/eggGlow</item>
     </style>
-
     <style name="Theme.ModuleEx1" parent="Base.Theme.ModuleEx1" />
 </resources>
