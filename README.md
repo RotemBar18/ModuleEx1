@@ -21,12 +21,12 @@ The project strictly follows the professor's assignment guidelines and builds ex
 
 ```mermaid
 graph TD
-    subgraph App Modules (Concrete Clients)
+    subgraph "App Modules (Concrete Clients)"
         CookieClicker[CookieClicker App]
         EggClicker[EggClicker App]
     end
     
-    subgraph Shared Library (Core Logic)
+    subgraph "Shared Library (Core Logic)"
         commonlibrary[commonlibrary Module]
     end
 
