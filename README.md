@@ -95,3 +95,11 @@ adb shell am start -n com.example.moduleex1/com.example.moduleex1.CookieActivity
 adb install -r EggClicker/build/outputs/apk/debug/EggClicker-debug.apk
 adb shell am start -n com.example.eggclicker/com.example.eggclicker.EggActivity
 ```
+
+---
+
+## 🎥 Gameplay Demo
+
+A gameplay video demonstrating both the **Cookie Clicker** and **Egg Clicker** applications in action can be viewed here:
+*   **[gameplay_demo.mp4](gameplay_demo.mp4)**
+
